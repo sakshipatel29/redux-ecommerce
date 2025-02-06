@@ -1,0 +1,75 @@
+/* General Styling for Product Card */
+.product-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .product-image img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .product-details {
+    flex: 1;
+    padding: 0 10px;
+  }
+  
+  .product-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .product-price {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .remove-btn {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .remove-btn:hover {
+    background-color: #ff1a1a;
+  }
+  
+  .product-amount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .amount-btn {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .amount-btn:hover {
+    background-color: #bbb;
+  }
+  
+  .amount {
+    font-size: 16px;
+    font-weight: bold;
+    width: 30px;
+    text-align: center;
+  }
+  
