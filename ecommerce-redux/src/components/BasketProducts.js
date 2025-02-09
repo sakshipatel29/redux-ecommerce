@@ -1,28 +1,31 @@
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
 import Products from "./Products";
+import "./BasketProducts.css";
 
 const BasketProducts = () => {
-    const { products, amount, total } = useSelector((store) => store.basket);
+  const { products, amount, total } = useSelector((store) => store.basket);
+
   return (
-    <div>
-    <div>
-      {products.map((item, i) => 
-        <Products 
-          key={new Date().getTime + Math.random()}
-          name= {item.name}
-          price= {item.price}
-          image = {item.image}
-          amount = {item.amount}
-        />
-      )}
+    <div className="basket-container">
+      <div className="products-list">
+        {products.map((item) => (
+          <Products 
+            key={item.id} 
+            name={item.name} 
+            price={item.price} 
+            image={item.image} 
+            amount={item.amount} 
+          />
+        ))}
+      </div>
+      <div className="basket-summary">
+        <label>Total Items:</label>
+        <p>{amount}</p> 
+        <label>Total Price:</label>
+        <p>$ {total}</p>
+      </div>
     </div>
-    <div>
-      <label>Total:</label>
-      <p>{amount}</p> 
-      <p>$ {total}</p>
-    </div>
-    </div>
-  )
-}
+  );
+};
 
 export default BasketProducts;
